@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY-Practice-In-Event</title>
+    <style>
+body{
+   padding-left:35%;
+   padding-top:12%;
+}   
+        .dark{
+            background-color: black;
+            color: white;
+        }.light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body   id="body">
+
+    <h1>MY-Practice-In-Event</h1>
+
+    <button onclick="greet(Event)">Click ME</button>
+    <button id="darkness">Darkness button</button>
+    <button id="ChangeParagraph">Chandge   paragraph</button>
+<p  id="text">This is  home    and     I   love    my  ------</p>
+<p  id="paragraph1" ></p>
+<script>
+    
+
+
+    
+    
+    //clickme   button
+    
+    
+    function  greet(event){
+        console.log(event)
+        // event.preventDefault();
+        text="buttom    is  Clicked"
+        
+        document.getElementById('paragraph1').innerHTML="button is clicked ",alert("Hello    World  !")
+        
+        
+        
+    }
+   //----->   Add Event   Listener 
+//darkness  button  practice
+
+// let mode="light";
+// let body=document.getElementById("body")
+
+// let darkness=document.getElementById("darkness")
+// darkness.addEventListener("click",()=>{
+// if(mode==="light"){
+//     mode="dark"
+//     body.classList.add("dark")
+//     body.classList.remove("light")
+// }else{
+//     mode="light"
+//     body.classList.add("light")
+//     body.classList.remove("dark")
+
+
+
+
+// }
+// console.log(mode)
+
+// })
+
+
+
+
+
+
+let Mode="light";
+let  body= document.getElementById("body")
+let darkness=document.getElementById("darkness")
+  darkness.onclick=()=>{
+   if(Mode==="light"){
+   Mode="dark"
+   body.classList.add("dark")
+   body.classList.remove("light")
+   console.log("dark")
+   darkness.innerText="Whitness"
+   
+}else{
+    Mode="light";
+    body.classList.add("light")
+    body.classList.remove("dark")
+    darkness.innerText="darkness"
+
+   console.log("light")
+
+
+}
+}
+
+let ChangeParagraph=document.getElementById("ChangeParagraph")
+let text=document.getElementById("text")
+let firstClick="remove";
+ChangeParagraph.onclick=()=>{
+if(firstClick==="remove"){
+    firstClick="changepara";
+    text.innerText="I am  shahzaib    I   am  student of  class   9th"
+    ChangeParagraph.innerText="Remove   paragraph"
+}else{
+    firstClick="remove";
+    text.innerText="This is  home    and     I   love    my  ------";
+    ChangeParagraph.innerText="change   paragraph"
+
+
+
+}
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
